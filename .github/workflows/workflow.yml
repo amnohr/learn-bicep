@@ -50,7 +50,7 @@ jobs:
         scope: resourcegroup
         failOnStdErr: false
         resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
-        template: deploy/main.bicep
+        template: ./deploy/main.bicep
         parameters: >
           environmentType=${{ env.ENVIRONMENT }}
         additionalArguments: --what-if
