@@ -11,6 +11,12 @@ env:
     ENVIRONMENT: nonprod
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: |
+        az bicep build -- file deploy/main.bicep
   deploy:
     runs-on: ubuntu-latest
     steps:
